@@ -10,28 +10,35 @@
   font-display: swap;
 }
 
-/* Force the font to be applied */
-.font-akira {
-  font-family: 'Akira Expanded', system-ui, -apple-system, sans-serif !important;
+/* Base styles */
+html {
+  @apply antialiased;
 }
 
-/* Add a fallback class */
-.akira-text {
-  font-family: 'Akira Expanded', system-ui, -apple-system, sans-serif;
-  letter-spacing: 0.05em;
-}
-
-/* Add this to ensure the font is applied globally */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  @apply bg-black text-white min-h-screen overflow-x-hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Akira Expanded', system-ui, -apple-system, sans-serif;
+/* Responsive text utilities */
+.text-responsive {
+  @apply text-base sm:text-lg md:text-xl;
 }
 
-/* Add this to your existing styles */
-canvas {
-  touch-action: none;
-  outline: none;
-} 
+.heading-responsive {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+}
+
+/* Form elements */
+input, textarea, select {
+  @apply text-sm sm:text-base;
+}
+
+/* Container utilities */
+.container-responsive {
+  @apply w-full max-w-md sm:max-w-lg md:max-w-2xl mx-auto px-4 sm:px-6 md:px-8;
+}
+
+/* Background wrapper */
+.bg-wrapper {
+  @apply min-h-screen w-full bg-black overflow-hidden relative;
+}
