@@ -3,17 +3,8 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
 
-type Invite = {
-  id: string;
-  created_at: string;
-  name: string;
-  email: string;
-  guests: number;
-  message: string;
-};
-
 export default function AdminPage() {
-  const [invites, setInvites] = useState<Invite[]>([]);
+  const [invites, setInvites] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -85,4 +76,4 @@ export default function AdminPage() {
       </div>
     </div>
   );
-} 
+}

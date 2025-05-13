@@ -3,8 +3,8 @@ import { useFrame } from '@react-three/fiber';
 import { Edges } from '@react-three/drei';
 import * as THREE from 'three';
 
-export function House3D({ color }: { color: string }) {
-  const groupRef = useRef<THREE.Group>(null);
+export function House3D({ color }) {
+  const groupRef = useRef(null);
 
   useFrame((_, delta) => {
     if (groupRef.current) {
