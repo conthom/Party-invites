@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import React from 'react';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '../lib/supabase';
 
 export function PartyForm() {
   const [formData, setFormData] = useState({
