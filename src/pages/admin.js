@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import React from 'react';
 
 type Invite = {
   id: string;
