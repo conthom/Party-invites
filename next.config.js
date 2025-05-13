@@ -2,10 +2,9 @@
 const nextConfig = {
   basePath: '',
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-};
-
-module.exports = {
   typescript: {
     ignoreBuildErrors: true,
   },
 };
+
+module.exports = nextConfig;
