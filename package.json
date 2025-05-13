@@ -11,6 +11,6 @@
     "@types/react-dom": "^18"
   },
   "scripts": {
-    "build": "npm install && tsc --version && next build"
+    "build": "npm install -g typescript && npm install && next build"
   }
 }
