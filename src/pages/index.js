@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatedTitle } from '@/components/AnimatedTitle';
+import { AnimatedTitle } from '../components/AnimatedTitle';
 import { PartyForm } from '@/components/PartyForm';
 import React from 'react';
 
