@@ -1,3 +1,14 @@
+'use client';
+
+import dynamic from 'next/dynamic';
+import { PartyForm } from '../components/PartyForm';
+import React from 'react';
+
+// Dynamically import AnimatedTitle with no SSR
+const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle').then(mod => mod.AnimatedTitle), {
+  ssr: false
+});
+
 export default function HomePage() {
   return (
     <div className="bg-wrapper">
