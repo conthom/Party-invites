@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('/fonts/Akira Expanded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Force the font to be applied */
+.font-akira {
+  font-family: 'Akira Expanded', system-ui, -apple-system, sans-serif !important;
+}
+
+/* Add a fallback class */
+.akira-text {
+  font-family: 'Akira Expanded', system-ui, -apple-system, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Add this to ensure the font is applied globally */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Akira Expanded', system-ui, -apple-system, sans-serif;
+}
+
+/* Add this to your existing styles */
+canvas {
+  touch-action: none;
+  outline: none;
+} 
