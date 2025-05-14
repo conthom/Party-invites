@@ -7,7 +7,6 @@ import { supabase } from '../lib/supabase';
 export function PartyForm() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     guests: 1,
     message: '',
   });
@@ -23,7 +22,6 @@ export function PartyForm() {
         .insert([
           {
             name: formData.name,
-            email: formData.email,
             guests: formData.guests,
             message: formData.message,
             created_at: new Date().toISOString(),
@@ -33,7 +31,7 @@ export function PartyForm() {
       if (error) throw error;
       
       setStatus('success');
-      setFormData({ name: '', email: '', guests: 1, message: '' });
+      setFormData({ name: '', guests: 1, message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
@@ -65,20 +63,6 @@ export function PartyForm() {
                    focus:ring-2 focus:ring-red-500/50 focus:border-transparent 
                    placeholder-gray-400 transition-all duration-200 text-sm sm:text-base"
           placeholder="Your name"
-        />
-      </div>
-
-      <div className="space-y-1 sm:space-y-2">
-        <label htmlFor="email" className="block text-base sm:text-lg font-medium text-white">Email (Optional)</label>
-        <input
-          type="email"
-          id="email"
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-gray-900 text-white border border-gray-700 
-                   focus:ring-2 focus:ring-red-500/50 focus:border-transparent 
-                   placeholder-gray-400 transition-all duration-200 text-sm sm:text-base"
-          placeholder="Your email"
         />
       </div>
 
