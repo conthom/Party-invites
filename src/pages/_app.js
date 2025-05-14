@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 import "../styles/styles.css";
 
 export default function App({ Component, pageProps }) {
@@ -16,7 +17,9 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/house.png" />
       </Head>
-      <Component {...pageProps} />
+      <ErrorBoundary>
+        <Component {...pageProps} />
+      </ErrorBoundary>
     </>
   );
 }
