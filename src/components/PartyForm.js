@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import React from 'react';
-import { supabase } from '../lib/supabase';
+import { getSupabase } from '../lib/supabase';
 
 export function PartyForm() {
   const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ export function PartyForm() {
     setStatus('loading');
 
     try {
-      const { error } = await supabase
+      const { error } = await getSupabase()
         .from('party_invites')
         .insert([
           {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import { supabase } from '../lib/supabase';
+import { getSupabase } from '../lib/supabase';
 
 export default function AdminPage() {
   const [invites, setInvites] = useState([]);
@@ -12,7 +12,7 @@ export default function AdminPage() {
   const [chatError, setChatError] = useState(null);
 
   const fetchInvites = useCallback(async () => {
-    const { data, error } = await supabase
+    const { data, error } = await getSupabase()
       .from('party_invites')
       .select('*')
       .order('created_at', { ascending: false });
