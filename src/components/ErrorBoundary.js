@@ -20,7 +20,7 @@ export class ErrorBoundary extends React.Component {
             <h2 className="text-xl mb-4">Something went wrong loading this section</h2>
             <button 
               onClick={() => window.location.reload()} 
-              className="bg-red-600 px-4 py-2 rounded-lg hover:bg-red-500"
+              className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-sky-500"
             >
               Try Again
             </button>

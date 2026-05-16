@@ -1,13 +1,8 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import { AnimatedTitle } from '../components/AnimatedTitle';
 import { PartyForm } from '../components/PartyForm';
-import React from 'react';
-
-// Dynamically import AnimatedTitle with no SSR
-const AnimatedTitle = dynamic(() => import('../components/AnimatedTitle').then(mod => mod.AnimatedTitle), {
-  ssr: false
-});
+import { GroupChat } from '../components/GroupChat';
 
 export default function HomePage() {
   return (
@@ -16,6 +11,7 @@ export default function HomePage() {
         <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl mx-auto space-y-6 sm:space-y-8 md:space-y-12">
           <AnimatedTitle />
           <PartyForm />
+          <GroupChat />
         </div>
       </main>
     </div>
